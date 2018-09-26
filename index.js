@@ -47,7 +47,6 @@ function PilotFreight(args) {
 		  trackingXml += "<TrackingNumber>" + data['trackingNumbers'][i] + "</TrackingNumber>";
 	  }
 	  trackingXml += "</PilotTrackingRequest>";
-	  console.log("tracking xml : " + trackingXml);
 	  
 	  var args = {
 		  data: trackingXml,

@@ -1,4 +1,4 @@
-#pilotfreight-nodejs
+##pilotfreight-nodejs
 Node.js library for Pilot Freight API. For now, it only contains Track method, but will have additional ones in the future.
 
 ## Installation

@@ -1,4 +1,3 @@
-
 /**
 * pilotfreight api client
 **/
@@ -34,7 +33,7 @@ function PilotFreight(args) {
     return $scope;
   };
 
-  
+  // handles the tracking request
   function buildTrackingRequest(data, options, resource, callback) {
 	  var httpClient = new RestClient();
 	  var endpointUrl = resource.url;
@@ -70,10 +69,12 @@ function PilotFreight(args) {
     return callback(null, res);
   }
   
+  // list of available resources
   var resources = {
     track: {f: buildTrackingRequest, r: handleTrackingResponse, url: 'https://www.pilotssl.com/pilotdetailpartnertracking.aspx', apiVersion: 1},
   };
 
+  // build all resources
   function buildResourceFunction(i, resources) {
     return function(data, options, callback) {
       if(!callback) {
